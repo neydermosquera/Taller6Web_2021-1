@@ -14,16 +14,17 @@
     
 </head>
     <body>
-        <section class="container col-sm-7">
+        <section class="container col-sm-7 principal">
             <br>
-            <div class="p-1 mb-1 bg-primary text-white">
+            <div class="p-1 mb-1 bg-success text-white title">
             <h3 class=" text-center">Registro de Usuario</h3>
             </div>
          <br>
          <div class="container">
-            <form action="" method="post" id = "formulario">
+            <form action="" method="post" id = "formulario" class="formulario">
             <div class="row">
-                    <div  class="form-group has-feedback left col-sm-6">
+
+                    <div  class="form-group has-feedback col-sm-6">
                         <i class="fa fa-user form-control-feedback"></i>
                         <input type="text" class="form-control" placeholder="Nombres">
                     </div>
@@ -47,44 +48,59 @@
                         <input type="text" class="form-control" placeholder="Email">
                     </div>
 
-                    <div  class="form-group has-feedback col-sm-6">
+                    <div  class="form-group formulario__grupo formulario__grupo-correcto has-feedback col-sm-6">
                         <i class="fa fa-user form-control-feedback"></i>
-                        <input type="text" class="form-control" placeholder="Usuario" name = "usuario" id="usuario">
-                        <i class="formulario__validacion-estado far fa-times-circle"></i>
-                        <p class="formulario__input-error">Este campo debe estar lleno y debe
-                            tener máximo 20 y mínimo
-                            10 caracteres. No debe contener
-                            caracteres extraños.</p>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="form-control" placeholder="Usuario" name = "usuario" id="usuario">
+                            <i class="fa fa-times-circle-o formulario__validacion-estado"></i>
+                        </div>
+                        <p class="formulario__input-error">El nombre de usuario debe tener entre 5 a 15 caracteres.</p>
                     </div>
                     
+                    <div  class="form-group formulario__grupo formulario__grupo-correcto has-feedback col-sm-6">
+                        <i class="fa fa-user form-control-feedback"></i>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="form-control" placeholder="Confirmar Usuario" name = "usuario2" id="usuario2">
+                            <i class="fa fa-times-circle-o formulario__validacion-estado"></i>
+                        </div>
+                        <p class="formulario__input-error">El nombre de usuario no conincide.</p>
+                    </div>
+    
+                    <div  class="form-group formulario__grupo formulario__grupo-correcto has-feedback col-sm-6">
+                        <i class="fa fa-lock form-control-feedback"></i>
+                        <div class="formulario__grupo-input">
+                            <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password">
+                            <i class="fa fa-times-circle-o formulario__validacion-estado"></i>
+                        </div>
+                        <p class="formulario__input-error">La contraseña debe tener mínimo 5 caracteres.</p>
+                    </div>
+    
+                    <div  class="form-group formulario__grupo formulario__grupo-correcto has-feedback col-sm-6">
+                        <i class="fa fa-lock form-control-feedback"></i>
+                        <div class="formulario__grupo-input">
+                            <input type="password" class="form-control" placeholder=" Confirmar Contraseña" id="password2" name="password2">
+                            <i class="fa fa-times-circle-o formulario__validacion-estado"></i>
+                        </div>
+                        <p class="formulario__input-error">Las contraseñas no coninciden.</p>
+                    </div>
 
-                    <div  class="form-group has-feedback col-sm-6">
-                        <i class="fa fa-user form-control-feedback"></i>
-                        <input type="text" class="form-control" placeholder="Confirmar Usuario" name = "usuario2" id="usuario2">
-                    </div>
+                    <div class="formulario__mensaje col-sm-12 text-center btn-danger" id="formulario__mensaje">
+                        <p><i class="fa fa-exclamation-triangle"></i> Error: <b>Complete correctamente el formulario de registro.</b></p>
+                    </div> <br> <br> <br>
+
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-danger botonvolver" onclick="location.href='index.html'">Cancelar/Volver</button>
+                    </div> <br> <br> <br>
     
-                    <div  class="form-group has-feedback col-sm-6">
-                        <i class="fa fa-lock form-control-feedback"></i>
-                        <input type="text" class="form-control" placeholder="Contraseña">
-                    </div>
-    
-                    <div  class="form-group has-feedback col-sm-6">
-                        <i class="fa fa-lock form-control-feedback"></i>
-                        <input type="text" class="form-control" placeholder="Confirmar Contraseña">
-                    </div>
-    
-                   
-    
-                    <div  class="form-group has-feedback col-sm-6">
-                        <i class="fa fa-phone form-control-feedback"></i>
-                        <input type="text" class="form-control" placeholder="Télefono o Celular">
-                    </div>
-    
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-success boton">Registrar</button>
+                    </div> <br> <br> <br>
+
+                    <div class="formulario__mensaje col-sm-12 text-center btn-success" id="formulario__mensaje">
+                        <p><i class="fa fa-check-circle"></i> <b> Registro Éxitoso.</b></p>
+                    </div> 
+
                     
-    
-                    <div class="col-sm-12 text-center">
-                        <button type="button" class="btn btn-primary">Registrar</button>
-                    </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="funciones.js"></script>
