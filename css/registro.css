@@ -91,6 +91,10 @@ label{
     display: block;
 }
 
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
 .formulario__grupo-correcto .formulario__validacion-estado{
     color: #1ed12d;
     opacity: 1;
