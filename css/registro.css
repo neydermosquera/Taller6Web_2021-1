@@ -65,6 +65,10 @@ label{
 	display: none;
 }
 
+.formulario__input-error-activo{
+    display: block;
+}
+
 .formulario__validacion-estado {
 	position: absolute;
 	right: 25px;
@@ -72,7 +76,7 @@ label{
     top: 10px;
 	z-index: 100;
 	font-size: 16px;
-	opacity: 1;
+	opacity: 0;
 }
 
 .formulario__mensaje{
@@ -92,6 +96,10 @@ label{
     opacity: 1;
 }
 
+.formulario__grupo-incorrecto .formulario__validacion-estado{
+    color: #c52323;
+    opacity: 1;
+}
 
 .title{
 
